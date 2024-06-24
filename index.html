@@ -15,6 +15,58 @@
             font-weight: bold;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
         }
+
+        html {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+            body {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotateS 1s ease-in-out infinite alternate ;
+
+            h1 {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 200px;
+                color: yellow;
+
+                span {
+                    color: white;
+
+                    &.yellow {
+                        color: yellow;
+                    }
+                }
+            }
+        }
+
+        @keyframes rotateS {
+
+            from {
+                transform: scale(1) rotate(0deg);
+            }
+
+            to {
+                transform: scale(1.4) rotate(60deg);
+            }
+        }
     </style>
 </head>
 
@@ -22,7 +74,7 @@
 <body>
 
     <div class="container">
-        <h1><span>JF</span>- <span>tech</span> </h1>
+        <h1><span>JF</span>- <span class="yellow">tech</span> </h1>
     </div>
 </body>
 
